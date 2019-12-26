@@ -27,7 +27,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/main_ic_market_sel" />
+                android:src="@drawable/main_selector_menu_market" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -48,7 +48,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/main_ic_wallet_nor" />
+                android:src="@drawable/main_selector_menu_wallet" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/main_ic_find_nor" />
+                android:src="@drawable/main_selector_menu_discover" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -90,7 +90,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/main_ic_my_nor" />
+                android:src="@drawable/main_selector_menu_user" />
 
             <TextView
                 android:layout_width="wrap_content"
