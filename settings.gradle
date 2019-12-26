@@ -1,2 +1,2 @@
-include ':app'
+include ':app','commonlib','market','user','wallet'
 rootProject.name='SDFS'

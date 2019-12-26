@@ -1,0 +1,290 @@
+<resources>
+    <string name="main_menu_market">行情</string>
+    <string name="main_menu_wallet">钱包</string>
+    <string name="main_menu_discover">发现</string>
+    <string name="main_menu_user">我的</string>
+
+
+    <string name="common_no_record">暂无记录</string>
+    <string name="common_scan">扫一扫</string>
+    <string name="common_album">相册</string>
+
+
+    <string name="market">行情</string>
+    <string name="market_datas_of_market_provided_by_third_party">本行情由第三方交易所提供</string>
+    <string name="market_coin_type_and_new_price">币种/最新价</string>
+    <string name="market_price_limit">涨跌幅</string>
+    <string name="market_unit_usdt">/USDT</string>
+
+
+    <!--LoginActivity-->
+    <string name="user_phone_number">手机号</string>
+    <string name="user_email">邮箱</string>
+    <string name="user_language">语言</string>
+    <string name="user_login">登录</string>
+    <string name="user_welcome_login">欢迎登录贝壳钱包</string>
+    <string name="user_country">国家/地区</string>
+    <string name="user_phone_email">手机号/邮箱</string>
+    <string name="user_password">密码</string>
+    <string name="user_forget_password">忘记密码？</string>
+    <string name="user_next_step">下一步</string>
+    <string name="user_register">注册</string>
+    <string name="user_safe_verify">安全验证</string>
+    <string name="user_phone_verify">手机验证</string>
+    <string name="user_email_verify">邮箱验证</string>
+    <string name="user_phone_verify_code">手机验证码</string>
+
+    <!--FindPasswordctivity-->
+    <string name="user_switch_email_find">切换邮箱找回</string>
+    <string name="user_switch_phone_find">切换手机找回</string>
+    <string name="user_find_password">找回密码</string>
+    <string name="user_login_problem">登录遇到问题</string>
+    <string name="user_find_methods">你可以通过手机号（或邮箱）+验证码登录\n贝壳钱包</string>
+    <string name="user_please_input_phone">请输入手机号</string>
+    <string name="user_please_input_email">请输入邮箱</string>
+    <string name="user_input_correct_phone">请输入正确的手机号</string>
+    <string name="user_input_correct_email">请输入正确的邮箱号</string>
+
+    <!--VerifyCodeActivity-->
+    <string name="user_input_verify_code">输入验证码</string>
+    <string name="user_had_send_code">我们已经发送验证码到你的手机：</string>
+    <string name="user_get_again">重新获取%1$s秒</string>
+
+    <!--ResetPasswordActivity-->
+    <string name="user_set_new_password">设置新密码</string>
+    <string name="user_plese_set_new_password">请为您的账号 %1s$ 设置一个 新密码</string>
+    <string name="user_please_input_new_password">请输入新密码</string>
+    <string name="user_password_tips">密码为8-16字符；必须包含字母、数字、特殊字符的两种</string>
+    <string name="user_make_sure_new_password">确定新密码</string>
+    <string name="user_ok">确定</string>
+
+    <!--RegisterActivity-->
+    <string name="user_switch_email_register">切换邮箱注册</string>
+    <string name="user_switch_phone_register">切换手机注册</string>
+    <string name="user_phone_register">手机号注册</string>
+    <string name="user_email_register">邮箱注册</string>
+    <string name="user_welcome_register">欢迎注册贝壳钱包</string>
+    <string name="user_verify_code">验证码</string>
+    <string name="user_resend">%1$sS重发</string>
+    <string name="user_nickname">昵称（必填）</string>
+    <string name="user_invite_code">邀请码（必填）</string>
+    <string name="user_had_read_agree">我已阅读并同意</string>
+    <string name="user_protocal">用户协议</string>
+    <string name="user_sure_password">确认密码</string>
+
+    <!--SelectCountryActivity-->
+    <string name="user_please_input_country">请输入国家和地区</string>
+
+
+    <!--UserCenterFragment-->
+    <string name="user_center">个人中心</string>
+    <string name="user_id">ID：</string>
+    <string name="user_account">账号：</string>
+    <string name="user_invite_code_1">邀请码</string>
+    <string name="user_address_list">地址簿</string>
+    <string name="user_help_feedback">帮助与反馈</string>
+    <string name="user_language_set">语言设置</string>
+    <string name="user_simple_chinese">简体中文</string>
+    <string name="user_authenticate">身份认证</string>
+    <string name="user_unauthorized">未认证</string>
+    <string name="user_login_password">登录密码</string>
+    <string name="user_pay_password">支付密码</string>
+    <string name="user_phone_bind">手机绑定</string>
+    <string name="user_email_bind">邮箱绑定</string>
+    <string name="user_not_set">未设置</string>
+    <string name="user_about_us">关于我们</string>
+    <string name="user_check_update">检查更新</string>
+    <string name="user_logout">退出登录</string>
+
+    <!--SystemMessageActivity-->
+    <string name="user_system_message">系统公告</string>
+    <string name="user_no_system_message">暂无消息</string>
+
+    <!--UserProfileActivity-->
+    <string name="user_profile">个人信息</string>
+    <string name="user_avatar">头像</string>
+    <string name="user_nick">昵称</string>
+    <string name="user_bk_id">贝壳 ID</string>
+    <string name="user_gender">性别</string>
+    <string name="user_male">男</string>
+    <string name="user_female">女</string>
+    <string name="user_remark">个性签名</string>
+    <string name="user_member_level">会员等级</string>
+
+
+    <!--SetAvatarActivity-->
+    <string name="user_set_avatar">头像设置</string>
+    <string name="user_take_photo">拍摄</string>
+    <string name="user_select_from_album">从手机相册选择</string>
+    <string name="user_cancel">取消</string>
+
+    <!--SetNickActivity-->
+    <string name="user_set_nick">昵称设置</string>
+    <string name="user_please_set_nick">请设置您的昵称</string>
+    <string name="user_check">确认</string>
+
+    <!--SetNickActivity-->
+    <string name="user_set_gender">性别设置</string>
+
+    <!--RemarkActivity-->
+    <string name="user_set_remark">请设置您的签名</string>
+
+    <!--InviteCodeActivityActivity-->
+    <string name="user_sdfs">SDFS</string>
+    <string name="user_base_blockchain">基于区块链的虚拟现实社区</string>
+    <string name="user_invite_code_2">邀请码：%1s$</string>
+    <string name="user_copy">复制</string>
+    <string name="user_share">的分享</string>
+    <string name="user_scan_q_code">扫描二维码注册下载 SDFS APP</string>
+    <string name="user_copy_url">复制链接</string>
+    <string name="user_save_picture">保存图片</string>
+    <string name="user_invite_friend">邀请好友注册SDFS吧！</string>
+
+    <!--AddAddressActivity-->
+    <string name="user_add_address">添加地址</string>
+    <string name="user_please_select_currency">请选择币种</string>
+    <string name="user_remark_name">备注名</string>
+    <string name="user_address">地址</string>
+    <string name="user_sel">SEL</string>
+    <string name="user_usdt">USDT</string>
+
+    <!--SetLanguageActivity-->
+    <string name="user_english">English</string>
+    <string name="user_japanese">日本語</string>
+    <string name="user_korean">한국어</string>
+
+    <!--AboutUsActivity-->
+    <string name="user_company">公司团队</string>
+    <string name="user_core_feature">核心特点</string>
+    <string name="user_contact_us">联系我们</string>
+    <string name="user_privacy">《隐私政策》</string>
+    <string name="user_service_agreement">《服务协议》</string>
+    <string name="user_and">和</string>
+
+    <!--AuthenticateActivty-->
+    <string name="user_really_name">真实姓名</string>
+    <string name="user_card_type">证件类型</string>
+    <string name="user_card_number">证件号码</string>
+    <string name="user_authenticate_success">认证成功</string>
+    <string name="user_identity_card">身份证</string>
+    <string name="user_passport">护照</string>
+
+
+    <!--ModifyPasswordActivty-->
+    <string name="user_modify_login_password">修改登录密码</string>
+    <string name="user_old_login_password">原登录密码</string>
+    <string name="user_new_login_password">新登录密码</string>
+    <string name="user_make_sure_login_password">确认登录密码</string>
+
+    <!--SetPayPasswordActivty-->
+    <string name="user_set_pay_password">设置支付密码</string>
+    <string name="user_after_modify_use_new">修改后，使用新密码进行支付</string>
+    <string name="user_new_pay_password">新交易密码</string>
+    <string name="user_make_sure_pay_password">确认交易密码</string>
+
+
+    <!--PhoneBindActivty-->
+    <string name="user_please_input_verify_code">请输入验证码</string>
+    <string name="user_get_verify_code">获取验证码</string>
+
+
+    <string name="wallet_wallet">钱包</string>
+    <string name="wallet_sel_wallet">SEL钱包</string>
+    <string name="wallet_my_property">我的资产 (USDT)</string>
+    <string name="sdfs_finance">SDFS Finance</string>
+    <string name="wallet_money_receiving_qr_code">收款码</string>
+    <string name="wallet_subchain_lease">子链租赁</string>
+    <string name="wallet_my_earnings">我的收益</string>
+    <string name="wallet_property">资产</string>
+    <string name="wallet_prompt_info_electronic_money">币种/最新价/涨跌幅</string>
+    <string name="wallet_prompt_info_property">数量/总值</string>
+    <string name="wallet_transfer_to_someone">付款给个人</string>
+    <string name="wallet_amount_of_money">金额（USDT）</string>
+    <string name="wallet_service_charge">手续费</string>
+    <string name="wallet_payment">付款</string>
+    <string name="wallet_transfer_sel">付款（SEL）</string>
+    <string name="wallet_please_input_password">请输入支付密码</string>
+    <string name="wallet_confirm">确 定</string>
+    <string name="wallet_next_step">下一步</string>
+    <string name="wallet_safety_verification">安全验证</string>
+    <string name="wallet_phone_verification">手机验证</string>
+    <string name="wallet_email_verification">邮箱验证</string>
+    <string name="wallet_require_auth_code">获取验证码</string>
+    <string name="wallet_auth_code">短信验证码</string>
+    <string name="wallet_balance">余额 (SEL)</string>
+    <string name="available_balance">可用余额 (SEL)</string>
+    <string name="wallet_in_trading">交易中</string>
+    <string name="wallet_charge_money">充币</string>
+    <string name="wallet_draw_money">提币</string>
+    <string name="wallet_flash_exchange">闪兑</string>
+    <string name="wallet_transfer_money">转账</string>
+    <string name="wallet_input_amount">输入数量</string>
+    <string name="wallet_exchange_amount">兑换数量</string>
+    <string name="wallet_sel">SEL</string>
+    <string name="wallet_reciprocal_account">对方账号</string>
+    <string name="wallet_please_input_phone_number_or_email">请输入手机号或邮箱</string>
+    <string name="wallet_prompt_for_transfer_money">数字货币将实时转入对方账户，无法退还。</string>
+    <string name="wallet_transfer_amount">转账数量（USDT）</string>
+    <string name="wallet_0_00">0.00</string>
+    <string name="wallet_comment_transfer_money">添加备注（20字以内）</string>
+    <string name="wallet_save_qr_code">保存二维码</string>
+    <string name="wallet_charge_money_address">充币地址：</string>
+    <string name="wallet_copy">复制</string>
+    <string name="wallet_adress_label">地址标签：</string>
+    <string name="wallet_present_available_money">当前可用：</string>
+    <string name="wallet_usdt">USDT</string>
+    <string name="wallet_draw_money_address">提币地址：</string>
+    <string name="wallet_please_input_or_long_press_to_paste_address">请输入或长按粘贴地址</string>
+    <string name="wallet_address_book">地址簿</string>
+    <string name="wallet_do_not_ust_tag">不使用Tag</string>
+    <string name="wallet_please_input_address_label">请输入地址标签</string>
+    <string name="wallet_amount_usdt">数量（USDT）</string>
+    <string name="please_input_amount">请输入数量</string>
+    <string name="wallet_all">全部</string>
+    <string name="wallet_draw_money_prompt">请输入数量/超过当天提币限额/超过可用余额/低于最小提币限制</string>
+    <string name="wallet_actual_to_account">实际到帐</string>
+    <string name="wallet_cover_charge">服务费</string>
+    <string name="wallet_scan_qr_code_to_pay">无需添加好友，扫描二维码向我付款</string>
+    <string name="wallet_set_amount_of_money">设置金额</string>
+    <string name="wallet_clear_amount_of_money">清除金额</string>
+    <string name="wallet_bill">账单</string>
+    <string name="please_set_amount_of_money">请输入金额</string>
+    <string name="wallet_cancel_draw_money">撤销提币</string>
+    <string name="wallet_are_you_sure_to_cancel_this_transaction">你确定要撤销该笔提币吗？</string>
+    <string name="wallet_cancel">取消</string>
+    <string name="wallet_total_profit_30_sel">累计收益（30天/SEL)</string>
+    <string name="wallet_profit_7_sel">近7天收益 (SEL)</string>
+    <string name="wallet_rent">租赁</string>
+    <string name="wallet_quantification">量化中</string>
+    <string name="wallet_cancel_contract">解约</string>
+    <string name="wallet_subchain_rent">子链租赁</string>
+    <string name="wallet_yesterday_profit">昨日收益 (SEL)</string>
+    <string name="wallet_team_member_amount">团队人数</string>
+    <string name="wallet_subchain_team_performance">团队子链租赁业绩</string>
+    <string name="wallet_total_profit_preview">收益总览</string>
+    <string name="wallet_my_profit">我的收益</string>
+    <string name="wallet_transfer_record">交易记录</string>
+    <string name="wallet_no_records">暂无记录</string>
+    <string name="wallet_prompt_input_sel_id">请输入SEL ID或账号</string>
+    <string name="wallet_invalid">无效</string>
+    <string name="wallet_my_members">我的成员</string>
+    <string name="wallet_amount_of_rent">租赁数量</string>
+    <string name="wallet_minium_1000usdt">最小转入数量：1000USDT</string>
+    <string name="wallet_prompt_rent_amount_limit_100usdt_200usdt">单笔最小租赁数量：100USDT；单笔最大租赁数量：200USDT。</string>
+    <string name="wallet_cancel_contract_detail">解约详情</string>
+    <string name="wallet_rent_time">租赁时间</string>
+    <string name="wallet_expire_time">到期时间</string>
+    <string name="wallet_coin_type">币种</string>
+    <string name="wallet_amount">数量</string>
+    <string name="wallet_charge_violate_treaty">违约费</string>
+    <string name="wallet_charge_cancel_contract">解约费</string>
+    <string name="wallet_prompt_cancel_contract">注意：解约后如果子链租赁资产低于产生收益限额，将不产生收益。</string>
+
+    <string-array name="records">
+        <item >交易明细</item>
+        <item >充币记录</item>
+        <item >提币记录</item>
+        <item >转账记录</item>
+        <item >闪兑记录</item>
+    </string-array>
+</resources>
