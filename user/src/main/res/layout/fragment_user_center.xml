@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_2a2e39"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_2f333e"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_center"
+            android:textColor="@color/color_ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="22dp"
+            android:src="@drawable/user_ic_news"
+            android:tag="com.shell.sdfs.user.activity.SystemMessageActivity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMsgNum"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/user_message_num"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="100"
+            android:textColor="@color/color_ffffff"
+            android:textSize="9sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="29dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clUserProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/user_center_item_bg_1"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="18dp"
+                android:tag="com.shell.sdfs.user.activity.UserProfileActivity">
+
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/user_ic_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvNick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:text="Simon"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivAvatar"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="3dp"
+                    android:text="ID：SEL123456789"
+                    android:textColor="@color/color_979797"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/ivAvatar"
+                    app:layout_constraintTop_toBottomOf="@id/tvNick" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/user_ic_jump_next"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvID" />
+
+                <TextView
+                    android:id="@+id/tvAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="账号：+86150****2070"
+                    android:textColor="@color/color_979797"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/ivAvatar"
+                    app:layout_constraintTop_toBottomOf="@id/tvID" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/user_center_item_bg_2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvInviteCode"
+                    style="@style/Left_TextView_1_2"
+                    android:drawableLeft="@drawable/user_ic_my_invitation"
+                    android:drawableRight="@drawable/user_ic_jump_next"
+                    android:tag="com.shell.sdfs.user.activity.InviteCodeActivity"
+                    android:text="@string/user_invite_code_1" />
+
+                <View style="@style/line" />
+
+                <TextView
+                    android:id="@+id/tvAddressList"
+                    style="@style/Left_TextView_1_2"
+                    android:drawableLeft="@drawable/user_ic_my_address"
+                    android:drawableRight="@drawable/user_ic_jump_next"
+                    android:tag="com.shell.sdfs.user.activity.AddressListActivity"
+                    android:text="@string/user_address_list" />
+
+                <View style="@style/line" />
+
+                <TextView
+                    android:id="@+id/tvHelp"
+                    style="@style/Left_TextView_1_2"
+                    android:drawableLeft="@drawable/user_ic_my_help"
+                    android:drawableRight="@drawable/user_ic_jump_next"
+                    android:tag="com.shell.sdfs.user.activity.HelpActivity"
+                    android:text="@string/user_help_feedback" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/user_center_item_bg_2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llLanguageSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:tag="com.shell.sdfs.user.activity.SetLanguageActivity">
+
+                    <TextView
+                        style="@style/Left_TextView_1_1"
+                        android:drawableLeft="@drawable/user_ic_my_language"
+                        android:text="@string/user_language_set" />
+
+                    <TextView
+                        android:id="@+id/tvLanguage"
+                        style="@style/Right_TextView_3"
+                        android:drawableRight="@drawable/user_ic_jump_next"
+                        android:text="@string/user_simple_chinese" />
+                </LinearLayout>
+
+                <View style="@style/line" />
+
+                <LinearLayout
+                    android:id="@+id/llAuthenticate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:tag="com.shell.sdfs.user.activity.AuthenticateActivty">
+
+                    <TextView
+                        style="@style/Left_TextView_1_1"
+                        android:drawableLeft="@drawable/user_ic_my_authentication"
+                        android:text="@string/user_authenticate" />
+
+                    <TextView
+                        android:id="@+id/tvAuthenticate"
+                        style="@style/Right_TextView_3"
+                        android:drawableRight="@drawable/user_ic_jump_next"
+                        android:text="@string/user_unauthorized" />
+                </LinearLayout>
+
+                <View style="@style/line" />
+
+                <TextView
+                    android:id="@+id/tvLoginPassword"
+                    style="@style/Left_TextView_1_2"
+                    android:drawableLeft="@drawable/user_ic_my_signin"
+                    android:drawableRight="@drawable/user_ic_jump_next"
+                    android:tag="com.shell.sdfs.user.activity.ModifyPasswordActivty"
+                    android:text="@string/user_login_password" />
+
+                <View style="@style/line" />
+
+                <TextView
+                    android:id="@+id/tvPayPassword"
+                    style="@style/Left_TextView_1_2"
+                    android:drawableLeft="@drawable/user_ic_my_password"
+                    android:drawableRight="@drawable/user_ic_jump_next"
+                    android:tag="com.shell.sdfs.user.activity.SetPayPasswordActivty"
+                    android:text="@string/user_pay_password" />
+
+                <View style="@style/line" />
+
+                <LinearLayout
+                    android:id="@+id/llPhoneBind"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:tag="com.shell.sdfs.user.activity.PhoneBindActivty">
+
+                    <TextView
+                        style="@style/Left_TextView_1_1"
+                        android:drawableLeft="@drawable/user_ic_my_phone"
+                        android:text="@string/user_phone_bind" />
+
+                    <TextView
+                        android:id="@+id/tvPhone"
+                        style="@style/Right_TextView_3"
+                        android:drawableRight="@drawable/user_ic_jump_next"
+                        android:text="+86 150****2070" />
+                </LinearLayout>
+
+                <View style="@style/line" />
+
+                <LinearLayout
+                    android:id="@+id/llEmailBind"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:tag="com.shell.sdfs.user.activity.EmailBindActivty">
+
+                    <TextView
+                        style="@style/Left_TextView_1_1"
+                        android:drawableLeft="@drawable/user_ic_my_mailbox"
+                        android:drawablePadding="11dp"
+                        android:text="@string/user_email_bind" />
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        style="@style/Right_TextView_3"
+                        android:drawableRight="@drawable/user_ic_jump_next"
+                        android:text="@string/user_not_set" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/user_center_item_bg_2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvUserAgreement"
+                    style="@style/Left_TextView_1_2"
+                    android:drawableLeft="@drawable/user_ic_my_agreement"
+                    android:drawableRight="@drawable/user_ic_jump_next"
+                    android:tag="com.shell.sdfs.user.activity.UserAgreementActivity"
+                    android:text="@string/user_protocal" />
+
+                <View style="@style/line" />
+
+                <TextView
+                    android:id="@+id/tvAbout"
+                    style="@style/Left_TextView_1_2"
+                    android:drawableLeft="@drawable/user_ic_my_about"
+                    android:drawableRight="@drawable/user_ic_jump_next"
+                    android:tag="com.shell.sdfs.user.activity.AboutUsActivity"
+                    android:text="@string/user_about_us" />
+
+                <View style="@style/line" />
+
+                <LinearLayout
+                    android:id="@+id/llCheckUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <TextView
+                        style="@style/Left_TextView_2"
+                        android:drawableLeft="@drawable/user_ic_my_update"
+                        android:drawablePadding="11dp"
+                        android:text="@string/user_check_update" />
+
+                    <View
+                        android:id="@+id/ivUpdateDot"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/user_red_circle_dot" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvVersion"
+                        style="@style/Right_TextView_3"
+                        android:drawableRight="@drawable/user_ic_jump_next"
+                        android:text="V1.0.0" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLogout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/user_login_next"
+                android:gravity="center"
+                android:text="@string/user_logout"
+                android:textColor="@color/color_151723"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="InputView">
+        <attr name="Text_View_Type" format="integer" />
+        <attr name="Text_Hint" format="reference" />
+        <attr name="Hint_Color" format="reference" />
+        <attr name="Text_Color" format="reference" />
+        <attr name="Right_View_Type" format="integer" />
+        <attr name="Right_Drawable" format="reference" />
+        <attr name="Right_Text" format="reference" />
+        <attr name="Right_Text_Color" format="reference" />
+    </declare-styleable>
+
+</resources>

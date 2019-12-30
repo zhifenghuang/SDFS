@@ -12,6 +12,11 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 29
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
     }
 }
 

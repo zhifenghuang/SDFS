@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Left_TextView_1">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/color_c8c7cc</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Left_TextView_1_1" parent="Left_TextView_1">
+        <item name="android:drawablePadding">11dp</item>
+    </style>
+
+    <style name="Left_TextView_1_2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/color_c8c7cc</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:drawablePadding">11dp</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+    <style name="Left_TextView_2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/color_c8c7cc</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Right_TextView_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@color/color_979797</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Right_TextView_2" parent="Right_TextView_1">
+        <item name="android:drawableRight">@drawable/user_ic_jump_next</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <style name="Right_TextView_3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">right</item>
+        <item name="android:drawablePadding">9dp</item>
+        <item name="android:textColor">@color/color_c8c7cc</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/color_404552</item>
+    </style>
+
+    <style name="Center_TextView_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="Left_TextView_3">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/color_ffffff</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Left_TextView_4">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_ffffff</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Left_TextView_5">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_c8c7cc</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:drawableRight">@drawable/user_ic_jump_next</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingTop">15dp</item>
+    </style>
+
+    <style name="Left_TextView_6">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_dabc86</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Common_TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Common_TextView_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/color_979797</item>
+    </style>
+
+    <style name="Common_TextView_2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/color_979797</item>
+    </style>
+
+    <style name="Common_TextView_3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>
