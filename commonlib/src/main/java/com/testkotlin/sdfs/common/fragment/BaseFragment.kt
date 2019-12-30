@@ -1,4 +1,4 @@
-package com.testkotlin.user.fragment
+package com.testkotlin.sdfs.common.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +12,7 @@ abstract class BaseFragment : Fragment(){
     /**
      * fragment的View创建好后调用
      */
-    protected abstract fun onFragmentViewCreated(view: View, savedInstanceState: Bundle?)
+    protected abstract fun initView(view: View, savedInstanceState: Bundle?)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,6 +24,6 @@ abstract class BaseFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        onFragmentViewCreated(view, savedInstanceState)
+        initView(view, savedInstanceState)
     }
 }
