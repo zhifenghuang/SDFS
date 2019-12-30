@@ -16,7 +16,7 @@ import java.util.ArrayList
 @Route(path = "/app/MainActivity")
 class MainActivity : AppCompatActivity() {
 
-    var mFragments: ArrayList<Fragment> = ArrayList<Fragment>(4);
+    var mFragments: ArrayList<Fragment> = ArrayList(4);
     var mCurrentFragment: Fragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             itemView = ll_navigator.getChildAt(i);
             itemView.setTag(i);
             itemView.setOnClickListener {
-                var tag:Int = it.tag as Int
+                val tag:Int = it.tag as Int
                 switchFragment(mFragments.get(tag))
                 resetBottom(tag)
             }
