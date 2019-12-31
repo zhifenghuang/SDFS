@@ -34,4 +34,6 @@ dependencies {
 
     api 'com.jakewharton:butterknife:10.0.0'
     kapt "com.jakewharton:butterknife-compiler:10.0.0"
+
+    api 'androidx.cardview:cardview:1.0.0'
 }
