@@ -1,4 +1,4 @@
-package com.testkotlin.user.activity
+package com.testkotlin.sdfs.user.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

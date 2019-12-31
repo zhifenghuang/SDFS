@@ -3,7 +3,7 @@
     package="com.testkotlin.sdfs.user">
     <application
         >
-        <activity android:name="com.testkotlin.user.activity.RegisterActivity"/>
+        <activity android:name=".activity.RegisterActivity"/>
     </application>
 
 </manifest>

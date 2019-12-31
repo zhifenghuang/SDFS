@@ -1,6 +1,5 @@
 package com.testkotlin.sdfs
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -10,19 +9,23 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
+import com.testkotlin.sdfs.common.activity.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.ArrayList
 
 @Route(path = "/app/MainActivity")
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     var mFragments: ArrayList<Fragment> = ArrayList(4);
     var mCurrentFragment: Fragment? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_main;
+    }
+
+    override fun onCreated(savedInstanceState: Bundle?) {
         ARouter.getInstance().inject(this)
-        setContentView(R.layout.activity_main)
         val count = ll_navigator.childCount
         var itemView: View
         for (i in 0 until count) {
@@ -86,5 +89,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
         mCurrentFragment = to
+    }
+
+    override fun onClick(v: View?) {
+
     }
 }

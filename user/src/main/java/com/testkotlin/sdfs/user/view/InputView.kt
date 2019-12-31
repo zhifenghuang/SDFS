@@ -1,4 +1,4 @@
-package com.testkotlin.user.view
+package com.testkotlin.sdfs.user.view
 
 import android.content.Context
 import android.text.Editable
