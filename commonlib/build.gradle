@@ -32,8 +32,5 @@ dependencies {
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
     api 'androidx.recyclerview:recyclerview:1.1.0'
 
-    api 'com.jakewharton:butterknife:10.2.1'
-    kapt "com.jakewharton:butterknife-compiler:10.2.1"
-
     api 'androidx.cardview:cardview:1.0.0'
 }
