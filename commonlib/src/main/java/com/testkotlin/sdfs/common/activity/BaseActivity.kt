@@ -86,4 +86,13 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
         }
         startActivity(intent)
     }
+
+    /**
+     * 点后退按钮触发
+     *
+     * @param view
+     */
+    fun onBackClick(view: View) {
+        finish()
+    }
 }
