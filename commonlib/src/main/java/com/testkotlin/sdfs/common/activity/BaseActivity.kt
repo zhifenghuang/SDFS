@@ -27,34 +27,8 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-
-    protected fun setEditTextHint(et: EditText, text: String?) {
-        et.hint = text ?: ""
-    }
-
-
-    protected fun setText(tv: TextView, text: String?) {
-        tv.text = text ?: ""
-    }
-
-    protected fun setText(tv:TextView, textId: Int) {
-        tv.setText(getString(textId))
-    }
-
     protected fun setTextColor(tv: TextView, clorId: Int) {
         tv.setTextColor(ContextCompat.getColor(this, clorId))
-    }
-
-    protected fun setImage(iv:ImageView, drawableId: Int) {
-        iv.setImageResource(drawableId)
-    }
-
-    protected fun setBackground(view:View, drawableId: Int) {
-        view.setBackgroundResource(drawableId)
-    }
-
-    protected fun getTextById(tv: TextView): String {
-        return tv.text.toString().trim { it <= ' ' }
     }
 
     protected fun setViewVisible(vararg views: View) {

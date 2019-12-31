@@ -57,15 +57,15 @@ class LoginActivity : BaseActivity() {
 
     fun resetView() {
         if (mLoginType == 0) {
-            setBackground(tvPhone, R.drawable.user_login_tab_selected_left)
+            tvPhone.setBackgroundResource(R.drawable.user_login_tab_selected_left)
             setTextColor(tvPhone, R.color.color_151723)
             setTextColor(tvEmail, R.color.color_979797)
-            setBackground(tvEmail, R.drawable.user_login_tab_unselected_right)
+            tvEmail.setBackgroundResource(R.drawable.user_login_tab_unselected_right)
             setViewVisible(inputViewCountry, line0, inputViewPhone)
             setViewGone(inputViewEmail)
         } else {
-            setBackground(tvPhone, R.drawable.user_login_tab_unselected_left)
-            setBackground(tvEmail, R.drawable.user_login_tab_selected_right)
+            tvPhone.setBackgroundResource(R.drawable.user_login_tab_unselected_left)
+            tvEmail.setBackgroundResource(R.drawable.user_login_tab_selected_right)
             setTextColor(tvEmail, R.color.color_151723)
             setTextColor(tvPhone, R.color.color_979797)
             setViewGone(inputViewCountry, line0, inputViewPhone)
