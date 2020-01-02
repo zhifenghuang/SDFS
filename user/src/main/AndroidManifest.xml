@@ -4,6 +4,7 @@
     <application
         >
         <activity android:name=".activity.RegisterActivity"/>
+        <activity android:name=".activity.SelectCountryActivity"/>
     </application>
 
 </manifest>
