@@ -6,6 +6,9 @@
         <activity android:name=".activity.RegisterActivity"/>
         <activity android:name=".activity.SelectCountryActivity"/>
         <activity android:name=".activity.LanguageActivity"/>
+        <activity android:name=".activity.VerifyCodeActivity"/>
+        <activity android:name=".activity.FindPasswordActivity"/>
+        <activity android:name=".activity.ResetPasswordActivity"/>
     </application>
 
 </manifest>

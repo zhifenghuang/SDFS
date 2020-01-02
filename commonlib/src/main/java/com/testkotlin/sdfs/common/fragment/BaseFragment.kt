@@ -1,12 +1,15 @@
 package com.testkotlin.sdfs.common.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 
-abstract class BaseFragment : Fragment(){
+abstract class BaseFragment : Fragment(), View.OnClickListener {
     protected abstract fun getLayoutId(): Int
 
     /**
@@ -25,5 +28,45 @@ abstract class BaseFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView(view, savedInstanceState)
+    }
+
+    protected fun setViewsOnClickListener(vararg views: View) {
+        for (view in views) {
+            view.setOnClickListener(this)
+        }
+    }
+
+    protected fun setTextColor(tv: TextView, clorId: Int) {
+        tv.setTextColor(ContextCompat.getColor(activity!!, clorId))
+    }
+
+    protected fun setViewVisible(vararg views: View) {
+        for (view in views) {
+            view.setVisibility(View.VISIBLE)
+        }
+    }
+
+    protected fun setViewGone(vararg views: View) {
+        for (view in views) {
+            view.setVisibility(View.GONE)
+        }
+    }
+
+    protected fun setViewInvisible(vararg views: View) {
+        for (view in views) {
+            view.setVisibility(View.INVISIBLE)
+        }
+    }
+
+    protected fun goPager(cls: Class<*>) {
+        goPager(cls, null)
+    }
+
+    protected fun goPager(cls: Class<*>, bundle: Bundle?) {
+        val intent = Intent(activity, cls)
+        if (bundle != null) {
+            intent.putExtras(bundle)
+        }
+        startActivity(intent)
     }
 }

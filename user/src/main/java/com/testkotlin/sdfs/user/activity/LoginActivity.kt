@@ -9,7 +9,6 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity() {
 
-
     override fun getLayoutId(): Int {
         return R.layout.activity_login
     }
@@ -39,6 +38,9 @@ class LoginActivity : BaseActivity() {
             }
             tvRegister -> {
                 goPager(RegisterActivity::class.java)
+            }
+            tvForgetPassword -> {
+                goPager(FindPasswordActivity::class.java)
             }
             tvNextStep -> {
                 ARouter.getInstance().build("/app/MainActivity").navigation()
