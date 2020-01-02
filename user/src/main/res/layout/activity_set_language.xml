@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_2a2e39"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/user_center_item_bg_2"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:id="@+id/llSimpleChinese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:tag="0">
+
+            <TextView
+                style="@style/Left_TextView_1"
+                android:text="@string/user_simple_chinese" />
+
+            <ImageView
+                android:id="@+id/ivCheck_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user_ic_checklist" />
+        </LinearLayout>
+
+        <View style="@style/line" />
+
+        <LinearLayout
+            android:id="@+id/llEnglish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:tag="1">
+
+            <TextView
+                style="@style/Left_TextView_1"
+                android:text="@string/user_english" />
+
+            <ImageView
+                android:id="@+id/ivCheck_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user_ic_checklist"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View style="@style/line" />
+
+        <LinearLayout
+            android:id="@+id/llJapanese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:tag="2">
+
+            <TextView
+                style="@style/Left_TextView_1"
+                android:text="@string/user_japanese" />
+
+            <ImageView
+                android:id="@+id/ivCheck_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user_ic_checklist"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View style="@style/line" />
+
+        <LinearLayout
+            android:id="@+id/llKorean"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:tag="3">
+
+            <TextView
+                style="@style/Left_TextView_1"
+                android:text="@string/user_korean" />
+
+            <ImageView
+                android:id="@+id/ivCheck_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user_ic_checklist"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

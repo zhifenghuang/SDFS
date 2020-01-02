@@ -31,8 +31,11 @@ class LoginActivity : BaseActivity() {
 
     override fun onClick(v: View?) {
         when (v) {
-            inputViewCountry->{
+            inputViewCountry -> {
                 goPager(SelectCountryActivity::class.java)
+            }
+            tvLanguage -> {
+                goPager(LanguageActivity::class.java)
             }
             tvRegister -> {
                 goPager(RegisterActivity::class.java)

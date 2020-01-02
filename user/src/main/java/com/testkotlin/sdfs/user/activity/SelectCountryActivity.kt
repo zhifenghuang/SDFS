@@ -28,7 +28,6 @@ class SelectCountryActivity : BaseActivity() {
     }
 
     private fun initCountrues() {
-        val recyclerView = findViewById(R.id.recyclerView) as RecyclerView
         val linearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         recyclerView.setLayoutManager(linearLayoutManager)
@@ -42,9 +41,11 @@ class SelectCountryActivity : BaseActivity() {
         for (i in 0..count) {
             bean = (startLetter + i).toChar().toString()
             letters.add(bean)
-            list.add(bean + "_Test_1")
-            list.add(bean + "_Test_2")
-            list.add(bean + "_Test_3")
+            list.run {
+                add(bean + "_Test_1")
+                add(bean + "_Test_2")
+                add(bean + "_Test_3")
+            }
         }
         mAdapter.setNewData(list)
 
@@ -57,7 +58,6 @@ class SelectCountryActivity : BaseActivity() {
                 super.onScrolled(recyclerView, dx, dy)
                 val firstVisiblePosition = linearLayoutManager.findFirstVisibleItemPosition()
                 if (firstVisiblePosition >= 0 && mAdapter.itemCount - 1 > firstVisiblePosition) {
-                    val tvCurrentLetter = findViewById(R.id.tvCurrentLetter) as TextView
                     val bean: String = mAdapter.getItem(firstVisiblePosition) as String
                     tvCurrentLetter.run {
                         setSelectLetter(bean)
@@ -112,22 +112,23 @@ class SelectCountryActivity : BaseActivity() {
         )
         for (i in 0 until count) {
             tvLetter = TextView(this)
-            tvLetter.tag = letters[i]
-            tvLetter.text = letters[i]
-            tvLetter.setPadding(0, 0, 30, 0)
-            tvLetter.setTextColor(
-                ContextCompat.getColor(
-                    this,
-                    if (i == 0) R.color.color_dabc86 else R.color.color_979797
+            tvLetter.run {
+                tag = letters[i]
+                text = letters[i]
+                setPadding(0, 0, 30, 0)
+                setTextColor(
+                    ContextCompat.getColor(
+                        this@SelectCountryActivity,
+                        if (i == 0) R.color.color_dabc86 else R.color.color_979797
+                    )
                 )
-            )
-            llLetters.addView(tvLetter, lp)
-            tvLetter.setOnClickListener { v ->
-                val letter = v.tag as String
-                val recyclerView = findViewById(R.id.recyclerView) as RecyclerView
-                val pos = mAdapter.getIndexByLetter(letter)
-                val linearLayoutManager = recyclerView.getLayoutManager() as LinearLayoutManager
-                linearLayoutManager.scrollToPositionWithOffset(pos, 0)
+                llLetters.addView(tvLetter, lp)
+                setOnClickListener { v ->
+                    val letter = v.tag as String
+                    val pos = mAdapter.getIndexByLetter(letter)
+                    val linearLayoutManager = recyclerView.getLayoutManager() as LinearLayoutManager
+                    linearLayoutManager.scrollToPositionWithOffset(pos, 0)
+                }
             }
         }
     }

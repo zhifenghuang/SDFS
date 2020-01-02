@@ -5,6 +5,7 @@
         >
         <activity android:name=".activity.RegisterActivity"/>
         <activity android:name=".activity.SelectCountryActivity"/>
+        <activity android:name=".activity.LanguageActivity"/>
     </application>
 
 </manifest>
