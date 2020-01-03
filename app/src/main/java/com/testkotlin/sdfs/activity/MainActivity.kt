@@ -1,4 +1,4 @@
-package com.testkotlin.sdfs
+package com.testkotlin.sdfs.activity
 
 import android.os.Bundle
 import android.view.View
@@ -9,12 +9,26 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
+import com.testkotlin.sdfs.R
 import com.testkotlin.sdfs.common.activity.BaseActivity
+import com.testkotlin.sdfs.contract.MainContract
+import com.testkotlin.sdfs.presenter.MainPresenter
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.ArrayList
 
 @Route(path = "/app/MainActivity")
-class MainActivity : BaseActivity() {
+class MainActivity() : BaseActivity<MainContract.Presenter>(),MainContract.View {
+    override fun getPresenter(): MainContract.Presenter {
+        return MainPresenter(this)
+    }
+
+    override fun getUserSuccess() {
+    }
+
+    override fun getUserFailed() {
+    }
+
+
 
     var mFragments: ArrayList<Fragment> = ArrayList(4);
     var mCurrentFragment: Fragment? = null

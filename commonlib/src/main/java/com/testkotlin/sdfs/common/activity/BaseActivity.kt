@@ -6,16 +6,22 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.testkotlin.sdfs.common.mvp.IPresenter
 
-abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
+abstract class BaseActivity<P : IPresenter> : AppCompatActivity(), View.OnClickListener {
+
+    protected var mPresenter: P? = null
 
     protected abstract fun getLayoutId(): Int
 
     protected abstract fun onCreated(savedInstanceState: Bundle?)
 
+    protected abstract fun getPresenter(): P
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(getLayoutId())
+        mPresenter = getPresenter();
         onCreated(savedInstanceState)
     }
 
@@ -51,9 +57,9 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
         goPager(cls, null)
     }
 
-    protected fun goPager(cls:Class<*>,bundle: Bundle?){
-        val intent=Intent(this,cls)
-        if(bundle!=null){
+    protected fun goPager(cls: Class<*>, bundle: Bundle?) {
+        val intent = Intent(this, cls)
+        if (bundle != null) {
             intent.putExtras(bundle)
         }
         startActivity(intent)
@@ -66,5 +72,19 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
      */
     fun onBackClick(view: View) {
         finish()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        //释放资源
+        mPresenter?.onDestroy()
+        mPresenter = null
+    }
+
+    fun showLoading(tips: String) {
+    }
+
+    fun hideLoading() {
     }
 }
