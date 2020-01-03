@@ -6,9 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import com.alibaba.android.arouter.launcher.ARouter
 import com.testkotlin.sdfs.common.activity.BaseActivity
 import com.testkotlin.sdfs.user.R
+import com.testkotlin.sdfs.user.contract.RegisterContract
+import com.testkotlin.sdfs.user.presenter.RegisterPresenter
 import kotlinx.android.synthetic.main.activity_register.*
 
-class RegisterActivity : BaseActivity() {
+class RegisterActivity : BaseActivity<RegisterPresenter>(),RegisterContract.View {
+    override fun getPresenter(): RegisterPresenter {
+        return RegisterPresenter(this)
+    }
 
     private var mRegisterType: Int = 0//0表示手机号注册，1表示邮箱注册
 

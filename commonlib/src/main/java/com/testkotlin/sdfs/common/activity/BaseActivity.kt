@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.testkotlin.sdfs.common.mvp.IPresenter
+import com.testkotlin.sdfs.common.mvp.IView
 
 abstract class BaseActivity<P : IPresenter> : AppCompatActivity(), View.OnClickListener {
 
@@ -80,11 +81,5 @@ abstract class BaseActivity<P : IPresenter> : AppCompatActivity(), View.OnClickL
         //释放资源
         mPresenter?.onDestroy()
         mPresenter = null
-    }
-
-    fun showLoading(tips: String) {
-    }
-
-    fun hideLoading() {
     }
 }

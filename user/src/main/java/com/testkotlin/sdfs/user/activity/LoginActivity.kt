@@ -5,9 +5,14 @@ import android.view.View
 import com.alibaba.android.arouter.launcher.ARouter
 import com.testkotlin.sdfs.common.activity.BaseActivity
 import com.testkotlin.sdfs.user.R
+import com.testkotlin.sdfs.user.contract.LoginContract
+import com.testkotlin.sdfs.user.presenter.LoginPresenter
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : BaseActivity() {
+class LoginActivity : BaseActivity<LoginPresenter>(),LoginContract.View {
+    override fun getPresenter(): LoginPresenter {
+        return LoginPresenter(this)
+    }
 
     override fun getLayoutId(): Int {
         return R.layout.activity_login

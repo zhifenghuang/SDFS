@@ -8,8 +8,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.testkotlin.sdfs.common.mvp.IPresenter
 
-abstract class BaseFragment : Fragment(), View.OnClickListener {
+abstract class BaseFragment<P : IPresenter> : Fragment(), View.OnClickListener {
+
+    protected var mPresenter: P? = null
+
+    protected abstract fun getPresenter(): P
+
     protected abstract fun getLayoutId(): Int
 
     /**
@@ -27,6 +33,7 @@ abstract class BaseFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mPresenter = getPresenter();
         initView(view, savedInstanceState)
     }
 
@@ -68,5 +75,19 @@ abstract class BaseFragment : Fragment(), View.OnClickListener {
             intent.putExtras(bundle)
         }
         startActivity(intent)
+    }
+
+    fun showLoading(tips: String) {
+    }
+
+    fun hideLoading() {
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        //释放资源
+        mPresenter?.onDestroy()
+        mPresenter = null
     }
 }

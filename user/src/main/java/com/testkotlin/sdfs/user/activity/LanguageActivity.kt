@@ -4,9 +4,14 @@ import android.os.Bundle
 import android.view.View
 import com.testkotlin.sdfs.common.activity.BaseActivity
 import com.testkotlin.sdfs.user.R
+import com.testkotlin.sdfs.user.contract.LanguageContract
+import com.testkotlin.sdfs.user.presenter.LanguagePresenter
 import kotlinx.android.synthetic.main.activity_set_language.*
 
-class LanguageActivity : BaseActivity() {
+class LanguageActivity : BaseActivity<LanguagePresenter>(),LanguageContract.View {
+    override fun getPresenter(): LanguagePresenter {
+        return LanguagePresenter(this)
+    }
 
     var mLanguage: Int = 0
 

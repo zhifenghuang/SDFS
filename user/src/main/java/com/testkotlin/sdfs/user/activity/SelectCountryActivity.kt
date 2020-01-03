@@ -11,11 +11,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.testkotlin.sdfs.common.activity.BaseActivity
 import com.testkotlin.sdfs.user.R
 import com.testkotlin.sdfs.user.adapter.SelectCountryAdapter
+import com.testkotlin.sdfs.user.contract.SelectCountryContract
+import com.testkotlin.sdfs.user.presenter.SelectCountryPresenter
 import kotlinx.android.synthetic.main.activity_select_country.*
 import java.util.ArrayList
 
 @Suppress("NAME_SHADOWING")
-class SelectCountryActivity : BaseActivity() {
+class SelectCountryActivity : BaseActivity<SelectCountryPresenter>(),SelectCountryContract.View {
+
+    override fun getPresenter(): SelectCountryPresenter {
+        return SelectCountryPresenter(this)
+    }
 
     var mAdapter: SelectCountryAdapter = SelectCountryAdapter()
 

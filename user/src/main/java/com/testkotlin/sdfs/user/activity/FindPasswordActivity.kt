@@ -4,9 +4,14 @@ import android.os.Bundle
 import android.view.View
 import com.testkotlin.sdfs.common.activity.BaseActivity
 import com.testkotlin.sdfs.user.R
+import com.testkotlin.sdfs.user.contract.FindPasswordContract
+import com.testkotlin.sdfs.user.presenter.FindPasswordPresenter
 import kotlinx.android.synthetic.main.activity_find_password.*
 
-class FindPasswordActivity : BaseActivity() {
+class FindPasswordActivity : BaseActivity<FindPasswordPresenter>(),FindPasswordContract.View {
+    override fun getPresenter(): FindPasswordPresenter {
+        return FindPasswordPresenter(this)
+    }
 
     var mFindPasMethod = 0  //0表示通过手机号，1表示通过邮箱
 
