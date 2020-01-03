@@ -9,7 +9,7 @@ import com.testkotlin.sdfs.common.mvp.IView
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
 
-class HttpObserver<T : BasicResponse<Data>, Data> : Observer<T>{
+class HttpObserver<T : BasicResponse<Data>, Data> : Observer<T> {
 
     private var isShowLoading: Boolean? = true
     private var view: IView? = null
@@ -37,8 +37,10 @@ class HttpObserver<T : BasicResponse<Data>, Data> : Observer<T>{
     }
 
     override fun onNext(t: T) {
-        if(t.isSuccess()) {
+        if (t.isSuccess()) {
             listener?.onNext(t.result!!)
+        } else {
+            listener?.dataError(t.code, t.msg!!)
         }
     }
 

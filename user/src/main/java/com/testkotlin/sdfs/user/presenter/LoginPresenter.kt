@@ -18,6 +18,10 @@ class LoginPresenter(view: LoginContract.View) : BasePresenter<LoginContract.Vie
 
                 }
 
+                override fun dataError(code: Int, msg: String) {
+
+                }
+
                 override fun onError(e: Throwable) {
 
                 }
