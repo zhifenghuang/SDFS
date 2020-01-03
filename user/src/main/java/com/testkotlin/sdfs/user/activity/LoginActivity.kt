@@ -2,6 +2,7 @@ package com.testkotlin.sdfs.user.activity
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.alibaba.android.arouter.launcher.ARouter
 import com.testkotlin.sdfs.common.activity.BaseActivity
 import com.testkotlin.sdfs.user.R
@@ -10,6 +11,8 @@ import com.testkotlin.sdfs.user.presenter.LoginPresenter
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity<LoginPresenter>(), LoginContract.View {
+
+
     override fun getPresenter(): LoginPresenter {
         return LoginPresenter(this)
     }
@@ -47,8 +50,7 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginContract.View {
                 goPager(FindPasswordActivity::class.java)
             }
             tvNextStep -> {
-                ARouter.getInstance().build("/app/MainActivity").navigation()
-           //     getPresenter().login()
+                getPresenter().login("55555", "123456")
             }
             tvPhone -> {
                 if (mLoginType == 0) {
@@ -83,6 +85,14 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginContract.View {
             setViewGone(inputViewCountry, line0, inputViewPhone)
             setViewVisible(inputViewEmail)
         }
+    }
+
+    override fun loginSuccess() {
+        Toast.makeText(this, getString(R.string.user_login_success), Toast.LENGTH_SHORT).show()
+        ARouter.getInstance().build("/app/MainActivity").navigation()
+    }
+
+    override fun loginFailed() {
     }
 
 }

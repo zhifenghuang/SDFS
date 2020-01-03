@@ -10,7 +10,9 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.annotations.NonNull
 import io.reactivex.functions.Predicate
 import io.reactivex.schedulers.Schedulers
+import okhttp3.MediaType
 import okhttp3.OkHttpClient
+import okhttp3.RequestBody
 import okhttp3.logging.HttpLoggingInterceptor
 import org.apache.http.conn.ConnectTimeoutException
 import retrofit2.Retrofit
@@ -67,7 +69,7 @@ class Api private constructor() {
     }
 
     private fun getBaseUrl(): String {
-        return "";
+        return "http://118.178.16.240/";
     }
 
     companion object {
@@ -80,9 +82,16 @@ class Api private constructor() {
             }
     }
 
-    fun login(observer: HttpObserver<BasicResponse<UserBean>, UserBean>) {
+    fun login(
+        account: String,
+        password: String,
+        observer: HttpObserver<BasicResponse<UserBean>, UserBean>
+    ) {
         val iApi = mRetrofit?.create(IApi::class.java)
-        val observable = iApi?.login()
+        val observable = iApi?.login(
+            RequestBody.create(MediaType.parse("text/plain"), account)
+            , RequestBody.create(MediaType.parse("text/plain"), password)
+        )
         toSubscribe(observable, observer)
     }
 

@@ -11,18 +11,18 @@ class LoginPresenter(view: LoginContract.View) : BasePresenter<LoginContract.Vie
     LoginContract.Presenter {
 
 
-    override fun login() {
-        Api.getInstance().login(
+    override fun login(account: String, password: String) {
+        Api.getInstance().login(account,password,
             HttpObserver(mRootView, object : HttpListener<UserBean> {
-                override fun onNext(bean: UserBean) {
-
+                override fun onSuccess(bean: UserBean) {
+                    mRootView?.loginSuccess()
                 }
 
                 override fun dataError(code: Int, msg: String) {
 
                 }
 
-                override fun onError(e: Throwable) {
+                override fun connectError(e: Throwable) {
 
                 }
             })

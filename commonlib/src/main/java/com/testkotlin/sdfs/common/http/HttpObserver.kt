@@ -38,7 +38,7 @@ class HttpObserver<T : BasicResponse<Data>, Data> : Observer<T> {
 
     override fun onNext(t: T) {
         if (t.isSuccess()) {
-            listener?.onNext(t.result!!)
+            listener?.onSuccess(t.result!!)
         } else {
             listener?.dataError(t.code, t.msg!!)
         }
@@ -46,7 +46,7 @@ class HttpObserver<T : BasicResponse<Data>, Data> : Observer<T> {
 
     override fun onError(e: Throwable) {
         hideLoading()
-        listener?.onError(e)
+        listener?.connectError(e)
     }
 
     private val mHandler = object : Handler(Looper.getMainLooper()) {

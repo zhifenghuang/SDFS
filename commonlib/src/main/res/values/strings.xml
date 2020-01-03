@@ -33,6 +33,7 @@
     <string name="user_phone_verify">手机验证</string>
     <string name="user_email_verify">邮箱验证</string>
     <string name="user_phone_verify_code">手机验证码</string>
+    <string name="user_login_success">登录成功！</string>
 
     <!--FindPasswordctivity-->
     <string name="user_switch_email_find">切换邮箱找回</string>

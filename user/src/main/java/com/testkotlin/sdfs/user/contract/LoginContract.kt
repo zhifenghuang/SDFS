@@ -5,10 +5,11 @@ import com.testkotlin.sdfs.common.mvp.IView
 
 interface LoginContract {
     interface View : IView {
-
+        fun loginSuccess()
+        fun loginFailed()
     }
 
     interface Presenter : IPresenter {
-        fun login()
+        fun login(account: String, password: String)
     }
 }
