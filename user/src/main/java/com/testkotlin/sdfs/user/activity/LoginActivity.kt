@@ -47,8 +47,8 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginContract.View {
                 goPager(FindPasswordActivity::class.java)
             }
             tvNextStep -> {
-                //               ARouter.getInstance().build("/app/MainActivity").navigation()
-                getPresenter().login()
+                ARouter.getInstance().build("/app/MainActivity").navigation()
+           //     getPresenter().login()
             }
             tvPhone -> {
                 if (mLoginType == 0) {
