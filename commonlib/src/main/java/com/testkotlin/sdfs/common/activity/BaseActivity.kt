@@ -82,7 +82,7 @@ abstract class BaseActivity<P : IPresenter> : AppCompatActivity(), View.OnClickL
         mPresenter = null
     }
 
-    fun showLoading(tips: String){
+    fun showLoading(){
 
     }
 

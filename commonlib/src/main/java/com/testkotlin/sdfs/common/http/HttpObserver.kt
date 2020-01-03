@@ -53,7 +53,7 @@ class HttpObserver<T : BasicResponse<Data>, Data> : Observer<T> {
         override fun handleMessage(msg: Message) {
             when (msg.what) {
                 SHOW_LOADING -> {
-                    view?.showLoading("")
+                    view?.showLoading()
                 }
                 HIDE_LOADING -> {
                     view?.hideLoading()

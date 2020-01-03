@@ -77,7 +77,7 @@ abstract class BaseFragment<P : IPresenter> : Fragment(), View.OnClickListener {
         startActivity(intent)
     }
 
-    fun showLoading(tips: String) {
+    fun showLoading() {
     }
 
     fun hideLoading() {
