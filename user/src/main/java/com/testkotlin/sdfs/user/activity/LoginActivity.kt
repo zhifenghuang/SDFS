@@ -9,7 +9,7 @@ import com.testkotlin.sdfs.user.contract.LoginContract
 import com.testkotlin.sdfs.user.presenter.LoginPresenter
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : BaseActivity<LoginPresenter>(),LoginContract.View {
+class LoginActivity : BaseActivity<LoginPresenter>(), LoginContract.View {
     override fun getPresenter(): LoginPresenter {
         return LoginPresenter(this)
     }
@@ -19,7 +19,6 @@ class LoginActivity : BaseActivity<LoginPresenter>(),LoginContract.View {
     }
 
     var mLoginType: Int = 0
-
 
     override fun onCreated(savedInstanceState: Bundle?) {
         setViewsOnClickListener(
@@ -48,7 +47,8 @@ class LoginActivity : BaseActivity<LoginPresenter>(),LoginContract.View {
                 goPager(FindPasswordActivity::class.java)
             }
             tvNextStep -> {
-                ARouter.getInstance().build("/app/MainActivity").navigation()
+                //               ARouter.getInstance().build("/app/MainActivity").navigation()
+                getPresenter().login()
             }
             tvPhone -> {
                 if (mLoginType == 0) {

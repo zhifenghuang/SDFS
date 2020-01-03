@@ -9,5 +9,6 @@ interface LoginContract {
     }
 
     interface Presenter : IPresenter {
+        fun login()
     }
 }
